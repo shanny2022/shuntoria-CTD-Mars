@@ -40,7 +40,13 @@ function createCard(titleText) {
 function createDetail(label, value) {
   const item = document.createElement("p");
   item.classList.add("detail");
-  item.innerHTML = `<strong>${label}:</strong> ${value}`;
+
+  const labelText = document.createElement("strong");
+  labelText.textContent = `${label}:`;
+
+  item.appendChild(labelText);
+  item.append(` ${value}`);
+
   return item;
 }
 
