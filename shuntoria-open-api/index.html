@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Star Wars Open API project showing character and film data."
+    />
+    <title>Star Wars Open API Project</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <p class="eyebrow">Code the Dream Open API Project</p>
+      <h1>Star Wars Data Explorer</h1>
+      <p class="intro">
+        Use the navigation buttons to switch between two Star Wars data points:
+        a character and a film.
+      </p>
+      <nav class="view-switcher" aria-label="Star Wars data views">
+        <button type="button" class="nav-button active" data-view="character">
+          Character
+        </button>
+        <button type="button" class="nav-button" data-view="film">
+          Film
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="panel">
+        <h2 id="section-title">Main Character</h2>
+        <p id="section-description">
+          Loading character details from the Star Wars API.
+        </p>
+        <div id="result" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

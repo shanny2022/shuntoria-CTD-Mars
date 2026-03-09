@@ -1,0 +1,162 @@
+:root {
+  --bg: #07111f;
+  --bg-accent: #10233e;
+  --panel: rgba(9, 22, 39, 0.82);
+  --card: rgba(16, 35, 62, 0.95);
+  --text: #f5f7fb;
+  --muted: #bfd0e6;
+  --line: rgba(137, 175, 222, 0.28);
+  --accent: #f7b500;
+  --accent-dark: #d99500;
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(247, 181, 0, 0.18), transparent 25%),
+    linear-gradient(180deg, #030712 0%, #07111f 45%, #0b1d31 100%);
+  padding: 2rem 1rem 3rem;
+}
+
+.hero,
+main {
+  width: min(100%, 56rem);
+  margin: 0 auto;
+}
+
+.hero {
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 0.95;
+}
+
+.intro {
+  max-width: 42rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.view-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.nav-button {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  padding: 0.9rem 1.1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  transition: transform 0.18s ease, background-color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.nav-button:hover,
+.nav-button:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(247, 181, 0, 0.7);
+}
+
+.nav-button.active {
+  background: var(--accent);
+  color: #101010;
+  border-color: var(--accent);
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.panel h2 {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+  font-size: 1.6rem;
+}
+
+#section-description {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.detail {
+  margin: 0.55rem 0;
+  color: var(--muted);
+}
+
+.detail strong {
+  color: var(--text);
+}
+
+.crawl {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.status-message {
+  margin: 0;
+  color: var(--muted);
+}
+
+.status-message.error {
+  color: #ffb4b4;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 1.25rem 0.85rem 2rem;
+  }
+
+  .panel {
+    padding: 1rem;
+  }
+
+  .nav-button {
+    width: 100%;
+  }
+}
