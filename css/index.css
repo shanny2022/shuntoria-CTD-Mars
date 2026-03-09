@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 2rem 1.5rem 3rem;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-color: #f7f4ef;
+  color: #222222;
+}
+
+h1,
+h2 {
+  color: #1f4b43;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+a {
+  color: #0b5d8c;
+}
+
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+#skills li {
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background-color: #d8e9e4;
+  border: 1px solid #9fc3b8;
+}
+
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid #9fc3b8;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  #skills ul {
+    gap: 0.5rem;
+  }
+
+  #skills li {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
