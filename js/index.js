@@ -57,3 +57,41 @@ messageForm.addEventListener("submit", (event) => {
 
   messageForm.reset();
 });
+
+fetch("https://api.github.com/users/shanny2022/repos")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`GitHub request failed: ${response.status}`);
+    }
+
+    return response.json();
+  })
+  .then((repositories) => {
+    console.log(repositories);
+
+    const projectSection = document.getElementById("projects");
+    const projectList = projectSection.querySelector("ul");
+
+    for (let i = 0; i < repositories.length; i += 1) {
+      const project = document.createElement("li");
+      const projectLink = document.createElement("a");
+
+      projectLink.innerText = repositories[i].name;
+      projectLink.href = repositories[i].html_url;
+      projectLink.target = "_blank";
+      projectLink.rel = "noopener noreferrer";
+
+      project.appendChild(projectLink);
+      projectList.appendChild(project);
+    }
+  })
+  .catch((error) => {
+    console.error(error);
+
+    const projectSection = document.getElementById("projects");
+    const projectList = projectSection.querySelector("ul");
+    const errorMessage = document.createElement("li");
+
+    errorMessage.innerText = "Unable to load projects right now. Please try again later.";
+    projectList.appendChild(errorMessage);
+  });

@@ -46,6 +46,32 @@ a {
   list-style: none;
 }
 
+#projects ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 0.85rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+#projects li {
+  padding: 0.9rem 1rem;
+  border: 1px solid #9fc3b8;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+}
+
+#projects a {
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#projects a:hover,
+#projects a:focus {
+  text-decoration: underline;
+}
+
 #skills li {
   padding: 0.5rem 0.9rem;
   border-radius: 999px;
@@ -131,6 +157,10 @@ footer {
 
   #skills ul {
     gap: 0.5rem;
+  }
+
+  #projects ul {
+    grid-template-columns: 1fr;
   }
 
   #skills li {
