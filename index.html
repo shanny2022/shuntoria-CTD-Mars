@@ -9,6 +9,16 @@
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><a href="#About">About</a></li>
+      <li><a href="#Experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#Connect">Connect</a></li>
+      <li><a href="#leave-message">Leave a Message</a></li>
+    </ul>
+  </nav>
+
   <h1>Shuntoria Reid</h1>
 
   <section id="About">
@@ -41,6 +51,30 @@
       <li><a href="https://github.com/shanny2022" target="_blank" rel="noopener noreferrer">GitHub</a></li>
       <li><a href="https://www.linkedin.com/in/shuntoria-reid/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
     </ul>
+  </section>
+
+  <section id="leave-message">
+    <h2>Leave a Message</h2>
+    <form name="leave_message">
+      <label for="usersName">Name</label>
+      <br>
+      <input id="usersName" type="text" name="usersName" required>
+      <br>
+      <label for="usersEmail">Email</label>
+      <br>
+      <input id="usersEmail" type="email" name="usersEmail" required>
+      <br>
+      <label for="usersMessage">Message</label>
+      <br>
+      <textarea id="usersMessage" name="usersMessage" required></textarea>
+      <br>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section id="messages">
+    <h2>Messages</h2>
+    <ul></ul>
   </section>
 
   <script src="js/index.js"></script>

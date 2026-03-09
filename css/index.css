@@ -16,6 +16,24 @@ section {
   margin-bottom: 2rem;
 }
 
+nav ul,
+section ul {
+  padding-left: 1.25rem;
+}
+
+nav {
+  margin-bottom: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+}
+
 a {
   color: #0b5d8c;
 }
@@ -35,6 +53,67 @@ a {
   border: 1px solid #9fc3b8;
 }
 
+#leave-message form {
+  max-width: 36rem;
+}
+
+#leave-message label {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+#leave-message input,
+#leave-message textarea,
+#leave-message button,
+#messages button {
+  font: inherit;
+}
+
+#leave-message input,
+#leave-message textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  border: 1px solid #9fc3b8;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+}
+
+#leave-message textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+#leave-message button,
+#messages button {
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background-color: #1f4b43;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#messages ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#messages li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid #d8e9e4;
+}
+
+#messages span {
+  flex: 1 1 16rem;
+}
+
 footer {
   margin-top: 2rem;
   padding-top: 1rem;
@@ -46,6 +125,10 @@ footer {
     padding: 1.25rem 1rem 2rem;
   }
 
+  nav ul {
+    gap: 0.5rem 0.75rem;
+  }
+
   #skills ul {
     gap: 0.5rem;
   }
@@ -54,5 +137,17 @@ footer {
     width: 100%;
     box-sizing: border-box;
     text-align: center;
+  }
+
+  #leave-message input,
+  #leave-message textarea,
+  #leave-message button,
+  #messages button {
+    width: 100%;
+    min-height: 2.75rem;
+  }
+
+  #messages li {
+    align-items: stretch;
   }
 }
